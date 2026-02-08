@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/math-pwa/',
   plugins: [
     react(),
     VitePWA({
@@ -13,26 +14,26 @@ export default defineConfig({
         name: 'Math Academy - Learn Math Interactively',
         short_name: 'Math Academy',
         description: 'Interactive math courses with gamification',
-        start_url: '/',
+        start_url: '/math-pwa/',
         display: 'standalone',
         theme_color: '#6366f1',
         background_color: '#ffffff',
         orientation: 'portrait',
         icons: [
           {
-            src: '/icons/icon-192x192.svg',
+            src: 'icons/icon-192x192.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: '/icons/icon-512x512.svg',
+            src: 'icons/icon-512x512.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any'
           },
           {
-            src: '/icons/icon-maskable.svg',
+            src: 'icons/icon-maskable.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'maskable'
