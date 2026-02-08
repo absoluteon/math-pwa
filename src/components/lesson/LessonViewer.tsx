@@ -22,14 +22,12 @@ export function LessonViewer() {
   const [xpEarned, setXpEarned] = useState(0);
   const [lastAnswer, setLastAnswer] = useState<string | number | null>(null);
   const [finalCorrectCount, setFinalCorrectCount] = useState(0);
-  const [finalTotalCount, setFinalTotalCount] = useState(0);
 
   useEffect(() => {
     if (lessonData) {
       setAnswers(new Array(lessonData.lesson.problems.length).fill(null));
-      // Reset counters when starting a new lesson
+      // Reset counter when starting a new lesson
       setFinalCorrectCount(0);
-      setFinalTotalCount(0);
       setCurrentProblemIndex(0);
       setShowExplanation(false);
       setLessonComplete(false);
@@ -60,7 +58,6 @@ export function LessonViewer() {
     if (isThisCorrect) {
       setFinalCorrectCount(prev => prev + 1);
     }
-    setFinalTotalCount(prev => prev + 1);
 
     setShowExplanation(true);
   };

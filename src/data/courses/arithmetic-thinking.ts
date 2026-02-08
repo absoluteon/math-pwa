@@ -1,4 +1,4 @@
-import { Course, Lesson, Problem, ProblemType } from '../../models/Course';
+import { Course, ProblemType } from '../../models/Course';
 
 export const arithmeticThinking: Course = {
   id: 'arithmetic-thinking',

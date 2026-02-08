@@ -1,7 +1,6 @@
 import { db } from './db';
 import {
   UserProgress,
-  UserProgressDB,
   LessonProgress,
   createDefaultProgress,
   deserializeProgress,
